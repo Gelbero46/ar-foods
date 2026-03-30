@@ -175,7 +175,6 @@ export default function AdminClient({ initialItems }: { initialItems: MenuItem[]
     setError('')
   }
 
-  // paste your exact JSX return here unchanged
   return (
    <div className="min-h-screen bg-gray-50">
          {/* Header */}
@@ -194,7 +193,7 @@ export default function AdminClient({ initialItems }: { initialItems: MenuItem[]
                 <span className="text-xs text-gray-400 bg-gray-100 px-2.5 py-1 rounded-full font-medium">
                 {items.length} items
                 </span>
-                <UserButton afterSignOutUrl="/sign-in" />
+                <UserButton />
             </div>
         </header>
    

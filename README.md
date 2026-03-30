@@ -33,6 +33,7 @@ A Next.js admin panel for managing a restaurant's AR (Augmented Reality) menu. A
 - Node.js 18+
 - A Clerk account and API keys
 - An S3-compatible storage bucket (AWS S3, Cloudflare R2, etc.)
+- Mongodb and Prisma
 - A running `/api/menu-items` and `/api/upload` backend
 
 ### Installation
@@ -52,6 +53,9 @@ Create a `.env.local` file in the root:
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_...
 CLERK_SECRET_KEY=sk_...
 
+# Database
+DATABASE_URL= mongodb...
+
 # Storage (S3-compatible)
 AWS_REGION=us-east-1
 AWS_BUCKET_NAME=your-bucket
@@ -62,6 +66,7 @@ AWS_SECRET_ACCESS_KEY=...
 ### Run Locally
 
 ```bash
+npx prisma generate
 npm run dev
 ```
 
